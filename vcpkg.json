@@ -1,0 +1,9 @@
+{
+  "name" : "pleasecrash",
+  "version-string" : "1.0.0",
+  "builtin-baseline" : "9824d05f8d9548720ba3331f4baba3e2d6c1693b",
+  "dependencies" : [ {
+    "name" : "freetype",
+    "version>=" : "2.13.3"
+  } ]
+}
