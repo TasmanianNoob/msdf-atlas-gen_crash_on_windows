@@ -1,15 +1,6 @@
 cmake_minimum_required(VERSION 4.0)
 project(PleaseCrash)
 
-function(enable_asan tgt)
-    target_compile_options(${tgt} PRIVATE /fsanitize=address)
-    target_link_libraries(${tgt} PRIVATE
-            clang_rt.asan_dynamic-x86_64
-            clang_rt.asan_dynamic_runtime_thunk-x86_64
-    )
-    target_link_options(${tgt} PRIVATE /wholearchive:clang_rt.asan_dynamic_runtime_thunk-x86_64.lib)
-endfunction()
-
 set(CMAKE_CXX_STANDARD 20)
 
 set(MSDF_ATLAS_BUILD_STANDALONE OFF)
